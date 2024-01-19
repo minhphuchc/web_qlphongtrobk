@@ -8,7 +8,7 @@
       $( "#slider-range" ).slider({
         range: true,
         min: 100,
-        max: 5000,
+        max: 20000,
         values: [ {{ isset($oldData->price[0]) ? $oldData->price[0] / 1000 : 500 }}, {{ isset($oldData->price[1]) ? $oldData->price[1] / 1000 : 1500 }} ],
         slide: function( event, ui ) {
           let html = (ui.values[ 0 ]*1000).toLocaleString('it-IT', {style : 'currency', currency : 'VND'}) + " - " + (ui.values[ 1 ]*1000).toLocaleString('it-IT', {style : 'currency', currency : 'VND'});
