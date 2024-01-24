@@ -260,7 +260,7 @@
                         </li>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </ul>
-                <div id="tabsContent" class="tab-content" style="z-index: 1;">
+                <div id="tabsContent" class="tab-content" >
                     <?php $__currentLoopData = $categoryRoom; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div id="category<?php echo e($category->id); ?>"
                             class="tab-pane <?php if($key == 1): ?> active show <?php endif; ?> fade">
@@ -380,7 +380,7 @@
 <!-- blog section end -->
 
 <!-- brand section start -->
-<section class="small-section bg-light brand-wrap">
+<!-- <section class="small-section bg-light brand-wrap">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -419,7 +419,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <!-- brand section end -->
 <?php $__env->stopSection(); ?>

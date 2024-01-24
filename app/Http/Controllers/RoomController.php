@@ -13,6 +13,7 @@ use Redirect;
 use App\Models\BookingInformation;
 use App\Models\Notification;
 use App\Models\CommentRoom;
+use App\Models\news;
 class RoomController extends Controller
 {
     /**
@@ -91,7 +92,12 @@ class RoomController extends Controller
         $user = Auth::user();
         $data = User::where('id', $user->id)->first();
         $toast = $this->makeToast($result, 'Xóa bài thành công', 'Xóa bài thất bại');
-        return view('frontend.home', compact('toast', 'data'));
+        $districts = districts::where('province_code', 1)->get();
+        $categoryRoom = CategoryRoom::all();
+        $sort = ["sapXep" => "created_at", "sortBy" => 'desc'];
+        $rooms = Room::where('status', 1)->orderBy($sort['sapXep'],$sort['sortBy'])->take(6)->get();
+        $news = news::where('status', 1)->orderBy('view','desc')->take(3)->get();
+        return view('frontend.home', compact('toast', 'data','rooms','categoryRoom','districts','news'));
     }
     public function demoRoom($id)
     {

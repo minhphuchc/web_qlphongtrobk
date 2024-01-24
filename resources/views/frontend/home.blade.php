@@ -260,7 +260,7 @@
                         </li>
                     @endforeach
                 </ul>
-                <div id="tabsContent" class="tab-content" style="z-index: 1;">
+                <div id="tabsContent" class="tab-content" >
                     @foreach ($categoryRoom as $key => $category)
                         <div id="category{{ $category->id }}"
                             class="tab-pane @if ($key == 1) active show @endif fade">
@@ -379,7 +379,7 @@
 <!-- blog section end -->
 
 <!-- brand section start -->
-<section class="small-section bg-light brand-wrap">
+<!-- <section class="small-section bg-light brand-wrap">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -418,7 +418,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <!-- brand section end -->
 @endsection

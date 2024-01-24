@@ -489,13 +489,15 @@
                                         </div>
                                     </form>
                                     <div class="row justify-content-around" id="list_img">
-                                        @foreach (json_decode($room->list_img) as $image)
-                                            <div class="item_list_img" >
-                                                <img src="{{ asset('images/multi_room') . '/' . $image }}"
-                                                    class="item_img" alt="">
-                                                <span class="delete_image_button" name_img="{{ $image }}">X</span>
-                                            </div>
-                                        @endforeach
+                                        @if (!is_null($room->list_img) && count(json_decode($room->list_img)) > 0)
+                                            @foreach (json_decode($room->list_img) as $image)
+                                                <div class="item_list_img">
+                                                    <img src="{{ asset('images/multi_room') . '/' . $image }}" class="item_img" alt="">
+                                                    <span class="delete_image_button" name_img="{{ $image }}">X</span>
+                                                </div>
+                                            @endforeach
+                                        @endif
+
                                     </div>
 
                                     <form class="row gx-3">
