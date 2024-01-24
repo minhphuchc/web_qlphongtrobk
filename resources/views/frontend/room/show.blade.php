@@ -242,13 +242,13 @@
                                                     <h6>{{ number_format($item->price) . '/' . $item->unit }}</h6>
                                                     <p class="font-roboto">{{ Str::words($item->description, '25') }}</p>
                                                     <ul>
-                                                        <li><img src="../assets/images/svg/icon/double-bed.svg"
+                                                        <li><img src="../assets/images/svg/icon/electric.svg"
                                                                 class="img-fluid" alt="">Điện :
                                                             {{ number_format($item->electric) }} đ</li>
-                                                        <li><img src="../assets/images/svg/icon/bathroom.svg"
+                                                        <li><img src="../assets/images/svg/icon/water.svg"
                                                                 class="img-fluid" alt="">Nước :
                                                             {{ number_format($item->water) }} đ</li>
-                                                        <li><img src="../assets/images/svg/icon/square-ruler-tool.svg"
+                                                        <li><img src="../assets/images/svg/icon/area.svg"
                                                                 class="img-fluid ruler-tool" alt="">Diện tích:
                                                             {{ $item->area }} m<sup>2</sup></li>
                                                     </ul>

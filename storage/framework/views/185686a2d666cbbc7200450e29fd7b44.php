@@ -268,11 +268,11 @@
                                                 <h6><?php echo e(number_format($item->price) . '/' . $item->unit); ?></h6>
                                                 <p class="font-roboto"><?php echo e(Str::words($item->description, '25')); ?></p>
                                                 <ul>
-                                                    <li><img src="../assets/images/svg/icon/double-bed.svg" class="img-fluid"
+                                                    <li><img src="../assets/images/svg/icon/electric.svg" class="img-fluid"
                                                             alt="">Điện : <?php echo e(number_format($item->electric)); ?>đ</li>
-                                                    <li><img src="../assets/images/svg/icon/bathroom.svg" class="img-fluid"
+                                                    <li><img src="../assets/images/svg/icon/water.svg" class="img-fluid"
                                                             alt="">Nước : <?php echo e(number_format($item->water)); ?>đ</li>
-                                                    <li><img src="../assets/images/svg/icon/square-ruler-tool.svg"
+                                                    <li><img src="../assets/images/svg/icon/area.svg"
                                                             class="img-fluid ruler-tool" alt="">Diện tích:
                                                         <?php echo e($item->area); ?>m<sup>2</sup></li>
                                                 </ul>
