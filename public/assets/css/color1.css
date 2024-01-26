@@ -13325,7 +13325,7 @@ body.rtl.dark-layout .blog-single-detail .blog-title .post-detail li + li {
   font-family: Montserrat, sans-serif; }
 
 .property-wizard .form-control {
-  color: rgba(88, 97, 103, 0.6); }
+  color: rgba(0, 0, 0, 1); }
   .property-wizard .form-control::-webkit-input-placeholder {
     color: rgba(88, 97, 103, 0.6); }
   .property-wizard .form-control::-moz-placeholder {
